@@ -1,0 +1,61 @@
+{
+  "JavaScript": [
+    { "id": 1, "difficulty": "easy", "question": "Ce tip de limbaj este JavaScript?", "options": ["Compilat", "Interpretat", "Asamblare", "Low-level"], "answer": "Interpretat" },
+    { "id": 2, "difficulty": "easy", "question": "Ce returnează typeof null?", "options": ["null", "object", "undefined", "number"], "answer": "object" },
+    { "id": 3, "difficulty": "easy", "question": "Ce este NaN?", "options": ["Număr valid", "Not a Number", "String", "Boolean"], "answer": "Not a Number" },
+    { "id": 4, "difficulty": "easy", "question": "Cum declari o variabilă?", "options": ["var", "let", "const", "Toate"], "answer": "Toate" },
+    { "id": 5, "difficulty": "easy", "question": "Ce face console.log()?", "options": ["Afișează în consolă", "Salvează date", "Trimite request", "Creează funcții"], "answer": "Afișează în consolă" },
+
+    { "id": 6, "difficulty": "medium", "question": "Ce este closure?", "options": ["Funcție fără nume", "Funcție care păstrează scope", "Array", "Object"], "answer": "Funcție care păstrează scope" },
+    { "id": 7, "difficulty": "medium", "question": "Ce face Array.filter()?", "options": ["Modifică array", "Returnează elemente filtrate", "Sortează", "Șterge"], "answer": "Returnează elemente filtrate" },
+    { "id": 8, "difficulty": "medium", "question": "Ce este hoisting?", "options": ["Mutarea variabilelor sus", "Ștergere variabile", "Sortare", "Mapare"], "answer": "Mutarea variabilelor sus" },
+    { "id": 9, "difficulty": "medium", "question": "Ce este this?", "options": ["Variabilă globală", "Contextul execuției", "Funcție", "Array"], "answer": "Contextul execuției" },
+    { "id": 10, "difficulty": "medium", "question": "Ce face JSON.parse()?", "options": ["String → obiect", "Obiect → string", "Array → string", "Delete"], "answer": "String → obiect" },
+
+    { "id": 11, "difficulty": "hard", "question": "Ce este event loop?", "options": ["Loop infinit", "Mecanism async", "Funcție", "Object"], "answer": "Mecanism async" },
+    { "id": 12, "difficulty": "hard", "question": "Ce este Promise?", "options": ["Valoare imediată", "Rezultat async", "Array", "String"], "answer": "Rezultat async" },
+    { "id": 13, "difficulty": "hard", "question": "Ce face async/await?", "options": ["Sincron", "Simplifică async", "Șterge funcții", "Crează variabile"], "answer": "Simplifică async" },
+    { "id": 14, "difficulty": "hard", "question": "Ce este debounce?", "options": ["Delay execuție", "Loop", "Sortare", "Map"], "answer": "Delay execuție" },
+    { "id": 15, "difficulty": "hard", "question": "Ce este shallow copy?", "options": ["Copiere superficială", "Deep copy", "Delete", "Sort"], "answer": "Copiere superficială" }
+  ],
+
+  "React": [
+    { "id": 1, "difficulty": "easy", "question": "Ce este React?", "options": ["Framework backend", "Bibliotecă UI", "DB", "Server"], "answer": "Bibliotecă UI" },
+    { "id": 2, "difficulty": "easy", "question": "Ce hook folosești pentru state?", "options": ["useEffect", "useState", "useMemo", "useRef"], "answer": "useState" },
+    { "id": 3, "difficulty": "easy", "question": "Ce este JSX?", "options": ["HTML în JS", "CSS", "Backend", "DB"], "answer": "HTML în JS" },
+    { "id": 4, "difficulty": "easy", "question": "Ce sunt componentele?", "options": ["Funcții UI", "DB", "Server", "CSS"], "answer": "Funcții UI" },
+    { "id": 5, "difficulty": "easy", "question": "Ce face render?", "options": ["Afișează UI", "Șterge date", "API", "Loop"], "answer": "Afișează UI" },
+
+    { "id": 6, "difficulty": "medium", "question": "Ce face useEffect?", "options": ["UI", "Side effects", "State", "CSS"], "answer": "Side effects" },
+    { "id": 7, "difficulty": "medium", "question": "Ce sunt props?", "options": ["Date între componente", "State", "CSS", "Hook"], "answer": "Date între componente" },
+    { "id": 8, "difficulty": "medium", "question": "Ce este lifting state?", "options": ["Mutare state sus", "Delete", "Sort", "Loop"], "answer": "Mutare state sus" },
+    { "id": 9, "difficulty": "medium", "question": "Ce face useContext?", "options": ["State global", "Loop", "CSS", "API"], "answer": "State global" },
+    { "id": 10, "difficulty": "medium", "question": "Ce este key?", "options": ["Identificator listă", "State", "Hook", "CSS"], "answer": "Identificator listă" },
+
+    { "id": 11, "difficulty": "hard", "question": "Ce face React.memo?", "options": ["Previne re-render", "State", "API", "Loop"], "answer": "Previne re-render" },
+    { "id": 12, "difficulty": "hard", "question": "Ce face useMemo?", "options": ["Memoizează valori", "State", "Loop", "CSS"], "answer": "Memoizează valori" },
+    { "id": 13, "difficulty": "hard", "question": "Ce face useCallback?", "options": ["Memoizează funcții", "CSS", "Loop", "State"], "answer": "Memoizează funcții" },
+    { "id": 14, "difficulty": "hard", "question": "Ce este reconciliation?", "options": ["Comparare DOM", "API", "CSS", "Loop"], "answer": "Comparare DOM" },
+    { "id": 15, "difficulty": "hard", "question": "Ce este virtual DOM?", "options": ["Reprezentare UI", "DB", "Server", "CSS"], "answer": "Reprezentare UI" }
+  ],
+
+  "Web": [
+    { "id": 1, "difficulty": "easy", "question": "Ce face HTML?", "options": ["Structură", "Logică", "CSS", "Server"], "answer": "Structură" },
+    { "id": 2, "difficulty": "easy", "question": "Ce face CSS?", "options": ["Stilizare", "Logică", "DB", "API"], "answer": "Stilizare" },
+    { "id": 3, "difficulty": "easy", "question": "Ce este browser?", "options": ["Program web", "Server", "DB", "API"], "answer": "Program web" },
+    { "id": 4, "difficulty": "easy", "question": "Ce este URL?", "options": ["Adresă web", "DB", "CSS", "JS"], "answer": "Adresă web" },
+    { "id": 5, "difficulty": "easy", "question": "Ce este hyperlink?", "options": ["Link", "DB", "Server", "CSS"], "answer": "Link" },
+
+    { "id": 6, "difficulty": "medium", "question": "Ce este HTTP?", "options": ["Protocol", "DB", "CSS", "Loop"], "answer": "Protocol" },
+    { "id": 7, "difficulty": "medium", "question": "Ce este API?", "options": ["Interfață", "CSS", "HTML", "Loop"], "answer": "Interfață" },
+    { "id": 8, "difficulty": "medium", "question": "Ce este cookie?", "options": ["Date stocate", "CSS", "Loop", "API"], "answer": "Date stocate" },
+    { "id": 9, "difficulty": "medium", "question": "Ce este localStorage?", "options": ["Stocare browser", "Server", "API", "Loop"], "answer": "Stocare browser" },
+    { "id": 10, "difficulty": "medium", "question": "Ce este DNS?", "options": ["Rezolvă domenii", "CSS", "DB", "Loop"], "answer": "Rezolvă domenii" },
+
+    { "id": 11, "difficulty": "hard", "question": "Ce este CORS?", "options": ["Securitate request", "CSS", "Loop", "DB"], "answer": "Securitate request" },
+    { "id": 12, "difficulty": "hard", "question": "Ce este HTTPS?", "options": ["HTTP securizat", "CSS", "Loop", "DB"], "answer": "HTTP securizat" },
+    { "id": 13, "difficulty": "hard", "question": "Ce este REST?", "options": ["Arhitectură API", "CSS", "Loop", "DB"], "answer": "Arhitectură API" },
+    { "id": 14, "difficulty": "hard", "question": "Ce este WebSocket?", "options": ["Conexiune bidirecțională", "CSS", "Loop", "DB"], "answer": "Conexiune bidirecțională" },
+    { "id": 15, "difficulty": "hard", "question": "Ce este caching?", "options": ["Stocare temporară", "CSS", "Loop", "DB"], "answer": "Stocare temporară" }
+  ]
+}

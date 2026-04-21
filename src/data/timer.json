@@ -1,0 +1,6 @@
+[
+  { "label": "Unlimited", "value": null },
+  { "label": "15s", "value": 15 },
+  { "label": "30s", "value": 30 },
+  { "label": "60s", "value": 60 }
+]

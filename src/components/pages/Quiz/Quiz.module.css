@@ -1,0 +1,121 @@
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.card {
+  width: 450px;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.category {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: #4a69bd;
+  color: white;
+  border-radius: 20px;
+}
+
+.question {
+  font-size: 16px;
+  margin: 15px 0;
+  color: #222;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.optionButton {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: left;
+}
+
+.optionButton:hover {
+  background: #4a69bd;
+  color: white;
+  transform: scale(1.02);
+}
+
+.correct {
+  background: #2ecc71 !important;
+  color: white;
+}
+
+.wrong {
+  background: #e74c3c !important;
+  color: white;
+}
+
+.streakTop {
+  position: absolute;
+  top: 20px;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.timer {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+}
+
+.difficulty {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-left: 8px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.easy {
+  background: #2ecc71;
+}
+
+.medium {
+  background: #f1c40f;
+  color: #222;
+}
+
+.hard {
+  background: #e74c3c;
+}
