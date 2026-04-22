@@ -1,0 +1,50 @@
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+}
+
+.badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: var(--badge-text);
+}
+
+.correct {
+  background: #22c55e;
+}
+
+.wrong {
+  background: #ef4444;
+}
+
+.body {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 13px;
+  color: var(--text);
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+}

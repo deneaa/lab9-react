@@ -4,55 +4,97 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f5f6fa;
+  background: var(--bg);
   font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
 .title {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #2f3640;
+  font-size: 34px;
+  margin-bottom: 22px;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  width: 320px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  background: var(--card);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
+  color: var(--text);
 }
 
 .label {
   font-size: 13px;
-  color: #555;
+  color: var(--muted);
 }
 
 .select {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #dcdde1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: transparent;
+  color: var(--text);
   outline: none;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .select:focus {
-  border-color: #4a69bd;
+  border-color: var(--primary);
 }
 
 .button {
   margin-top: 10px;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 8px;
-  background: #4a69bd;
+  border-radius: 10px;
+  background: var(--primary);
   color: white;
   cursor: pointer;
-  transition: 0.2s;
+  font-weight: 600;
+  transition: 0.2s ease;
 }
 
 .button:hover {
-  background: #1e3799;
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.select option {
+  background: var(--card);
+  color: var(--text);
+}
+
+.error {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: transparent;
+  color: var(--text);
+  outline: none;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.input::placeholder {
+  color: var(--muted);
+}
+
+.input:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+.inputError {
+  border: 1px solid #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
 }
