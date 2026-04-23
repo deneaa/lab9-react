@@ -31,3 +31,9 @@ body[data-theme="dark"] {
 * {
   margin: 0;
 }
+
+.themeToggle {
+  position: "absolute";
+  top: 10;
+  right: 10;
+}

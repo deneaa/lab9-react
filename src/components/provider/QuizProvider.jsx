@@ -3,7 +3,7 @@ import {
   QuizDispatchContext,
   QuizStateContext,
 } from "../quizContext/quizContext";
-import { initialState, reducer } from "../quizContext/quizReducer";
+import { initialState, reducer } from "../quizContext/QuizReducer";
 
 const QuizProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);

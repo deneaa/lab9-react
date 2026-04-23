@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import questions from "../../../data/questions.json";
 import { useQuizDispatch, useQuizState } from "../../quizContext/useQuiz";
 import styles from "./Quiz.module.css";
@@ -37,16 +37,16 @@ const Quiz = () => {
   const question = quizQuestions[quiz.currentIndex];
   const isLast = quiz.currentIndex === quizQuestions.length - 1;
 
-  const finishQuiz = () => {
+  const finishQuiz = useCallback(() => {
     const correct = answers.filter((a) => a.isCorrect).length;
     const total = answers.length;
     const score = total ? Math.round((correct / total) * 100) : 0;
 
     dispatch({ type: "SAVE_RESULT", payload: { score } });
     navigate("/results");
-  };
+  }, [answers, dispatch, navigate]);
 
-  const handleTimeout = () => {
+  const handleTimeout = useCallback(() => {
     if (!question) return;
 
     dispatch({
@@ -56,7 +56,7 @@ const Quiz = () => {
 
     if (isLast) finishQuiz();
     else dispatch({ type: "NEXT_QUESTION" });
-  };
+  }, [question, isLast, dispatch, finishQuiz]);
 
   const { timeLeft, stop } = useTimer(
     config.timer === "unlimited" ? null : Number(config.timer),
@@ -64,32 +64,35 @@ const Quiz = () => {
     quiz.timerStart,
   );
 
-  const handleAnswer = (answer) => {
-    if (selected !== null || !question) return;
+  const handleAnswer = useCallback(
+    (answer) => {
+      if (selected !== null || !question) return;
 
-    stop();
+      stop();
 
-    const correct = answer === question.answer;
+      const correct = answer === question.answer;
 
-    setSelected(answer);
-    setIsCorrect(correct);
+      setSelected(answer);
+      setIsCorrect(correct);
 
-    dispatch({
-      type: "ANSWER_QUESTION",
-      payload: { question, selectedAnswer: answer },
-    });
+      dispatch({
+        type: "ANSWER_QUESTION",
+        payload: { question, selectedAnswer: answer },
+      });
 
-    if (isLast) {
-      finishQuiz();
-      return;
-    }
+      if (isLast) {
+        finishQuiz();
+        return;
+      }
 
-    setTimeout(() => {
-      dispatch({ type: "NEXT_QUESTION" });
-      setSelected(null);
-      setIsCorrect(null);
-    }, 700);
-  };
+      setTimeout(() => {
+        dispatch({ type: "NEXT_QUESTION" });
+        setSelected(null);
+        setIsCorrect(null);
+      }, 700);
+    },
+    [selected, question, isLast, dispatch, stop, finishQuiz],
+  );
 
   if (!question) return <div className={styles.loading}>Loading...</div>;
 

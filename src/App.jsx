@@ -8,14 +8,14 @@ import ThemeToggle from "./components/ThemeToggle/ThemeToggle.jsx";
 import Results from "./components/pages/Results/Results.jsx";
 
 const App = () => {
-  const { page } = useQuizState();
+  const { ui } = useQuizState();
   return (
     <div>
-      <div style={{ position: "absolute", top: 10, right: 10 }}>
+      <div className="themeToggle">
         <ThemeToggle />
       </div>
       <Routes>
-        <Route path="/" element={<Navigate to={`/${page}`} />} />
+        <Route path="/" element={<Navigate to={`/${ui.page}`} />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/start" element={<StartPage />} />
         <Route path="/results" element={<Results />} />
